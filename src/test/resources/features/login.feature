@@ -19,3 +19,10 @@ Feature: Library app login feature
     When user enters student username
     And user enters student password
     Then user should see dashboard
+
+  Scenario: Login as a admin
+    Given user is on the library login page
+    When user enters admin username
+    And user enters admin password
+    Then user should see dashboard
+

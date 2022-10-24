@@ -28,13 +28,22 @@ public class Login_StepDefinitions {
 
     @When("user enters student username")
     public void userEntersStudentUsername() {
+        System.out.println("user enters student username");
     }
 
     @And("user enters student password")
     public void userEntersStudentPassword() {
+        System.out.println("user enters student password");
     }
 
 
+    @When("user enters admin username")
+    public void userEntersAdminUsername() {
+        System.out.println("user enters admin username");
+    }
 
-
+    @And("user enters admin password")
+    public void userEntersAdminPassword() {
+        System.out.println("user enters admin password");
+    }
 }
