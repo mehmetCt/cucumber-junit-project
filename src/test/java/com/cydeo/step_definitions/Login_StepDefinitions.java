@@ -44,7 +44,6 @@ public class Login_StepDefinitions {
 
 
 
-
     @And("user enters admin password")
     public void userEntersAdminPassword() {
         System.out.println("user enters admin password");
