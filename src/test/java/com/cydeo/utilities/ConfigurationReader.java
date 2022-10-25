@@ -22,7 +22,7 @@ public class ConfigurationReader {
         try{
         // 2- Create the object of FileInputStream
         // We need this object to open file as a stream in Java memory
-        FileInputStream file = new FileInputStream("configuration.properties");
+        FileInputStream file = new FileInputStream("config.properties");
 
         // 3- Load the properties object using FileInputStream object
         // Load "properties" object with the "file" we opened using FileInputStream

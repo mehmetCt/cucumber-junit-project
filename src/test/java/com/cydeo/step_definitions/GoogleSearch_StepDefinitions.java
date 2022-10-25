@@ -31,10 +31,23 @@ public class GoogleSearch_StepDefinitions {
 
     @Then("user sees apple – Google Search is in the google title")
     public void user_sees_apple_google_search_is_in_the_google_title() {
-     String expectedTitle = "apple – Google Search";
+     String expectedTitle = "apple - Google Search";
      String actualTitle = Driver.getDriver().getTitle();
 
      Assert.assertEquals("Title verification is failed!",expectedTitle,actualTitle);
+    }
+
+
+    @When("user types {string} in the google search box and clicks enter")
+    public void user_types_in_the_google_search_box_and_clicks_enter(String string) {
+
 
     }
+
+    @Then("user sees {string} is in the google title")
+    public void user_sees_is_in_the_google_title(String string) {
+
+
+    }
+
 }
