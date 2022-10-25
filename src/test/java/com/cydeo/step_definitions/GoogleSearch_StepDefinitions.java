@@ -39,8 +39,9 @@ public class GoogleSearch_StepDefinitions {
 
 
     @When("user types {string} in the google search box and clicks enter")
-    public void user_types_in_the_google_search_box_and_clicks_enter(String string) {
+    public void user_types_in_the_google_search_box_and_clicks_enter(String searchkeyword) {
 
+        googleSearchPage.searchBox.sendKeys(searchkeyword + Keys.ENTER);
 
     }
 
