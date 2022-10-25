@@ -24,23 +24,24 @@ public class Hooks {
     public void setupForLogin(){
         // If you want any code to run before any specific feature/scenario,
         // you can use value= "@tagname" to determine this
-        System.out.println("Setting up browser using cucumber @Before @login scenario");
+        System.out.println("====this will only apply to scenarios with @login tag");
     }
 
     //@Before (value="@db" , order=3)
     public void setupDatabaseScenario(){
-
+        System.out.println("====this will only apply to scenarios with @db tag");
     }
 
     //@BeforeStep
     public void setupScenarioStep(){
-        System.out.println("Setting up browser using cucumber @BeforeStep each scenario step");
+        System.out.println("--------> applying setup using @BeforeStep");
     }
 
-   // @BeforeStep
-    public void setupScenarioStepForLogin(){
-        System.out.println("Setting up browser using cucumber @BeforeStep each scenario step for login");
+    //@AfterStep
+    public void afterStep(){
+        System.out.println("--------> applying tearDown using @AfterStep");
     }
+
 
 
 }
