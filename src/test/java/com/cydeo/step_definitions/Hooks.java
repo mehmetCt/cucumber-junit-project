@@ -34,12 +34,12 @@ public class Hooks {
 
     //@BeforeStep
     public void setupScenarioStep(){
-        System.out.println("Setting up browser using cucumber @Before each scenario step");
+        System.out.println("Setting up browser using cucumber @BeforeStep each scenario step");
     }
 
    // @BeforeStep
     public void setupScenarioStepForLogin(){
-        System.out.println("Setting up browser using cucumber @Before each scenario step for login");
+        System.out.println("Setting up browser using cucumber @BeforeStep each scenario step for login");
     }
 
 
