@@ -46,8 +46,11 @@ public class GoogleSearch_StepDefinitions {
     }
 
     @Then("user sees {string} is in the google title")
-    public void user_sees_is_in_the_google_title(String string) {
+    public void user_sees_is_in_the_google_title(String expectedTitle) {
 
+        String actualTitle = Driver.getDriver().getTitle();
+
+        Assert.assertEquals(expectedTitle,actualTitle);
 
     }
 
