@@ -6,10 +6,19 @@ import io.cucumber.java.BeforeStep;
 
 public class Hooks {
 
-    @Before()
+    @Before
     public void setupScenario(){
         System.out.println("Setting up browser using cucumber @Before each scenario");
     }
+
+
+    @After
+    public void teardownScenario(){
+        // We will implement taking screenshot in this method
+        System.out.println("It will be closing browser using cucumber @After each scenario");
+    }
+
+
 
     //@Before (value = "@login", order=2)
     public void setupForLogin(){
@@ -21,13 +30,6 @@ public class Hooks {
     //@Before (value="@db" , order=3)
     public void setupDatabaseScenario(){
 
-    }
-
-
-    @After
-    public void teardownScenario(){
-        // We will implement taking screenshot in this method
-        System.out.println("It will be closing browser using cucumber @After each scenario");
     }
 
     //@BeforeStep
