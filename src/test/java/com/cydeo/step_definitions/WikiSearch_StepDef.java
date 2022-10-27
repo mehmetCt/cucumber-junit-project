@@ -44,7 +44,4 @@ public class WikiSearch_StepDef {
         Assert.assertTrue(Driver.getDriver().getTitle().contains(string));
     }
 
-
-
-
 }
