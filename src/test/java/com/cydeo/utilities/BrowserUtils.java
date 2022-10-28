@@ -2,6 +2,9 @@ package com.cydeo.utilities;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class BrowserUtils {
@@ -40,6 +43,13 @@ public class BrowserUtils {
         Assert.assertEquals(expectedTitle,actualTitle);
 
     }
+
+    public static void waitForInvisibilityOf(WebElement element){
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),15);
+        wait.until(ExpectedConditions.invisibilityOf(element));
+    }
+
+
 
 
 }
