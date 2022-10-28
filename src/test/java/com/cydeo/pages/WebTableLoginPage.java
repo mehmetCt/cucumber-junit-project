@@ -21,5 +21,16 @@ public class WebTableLoginPage {
     public WebElement loginButton;
 
 
+    /**
+     * This method will accept username and password and login to app
+     * @param username
+     * @param password
+     */
+    public void login(String username,String password){
+        inputUsername.sendKeys(username);
+        inputPassword.sendKeys(password);
+        loginButton.click();
+    }
+
 
 }
