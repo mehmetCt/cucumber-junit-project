@@ -36,4 +36,17 @@ public class WebTableLogin_StepDefs {
     public void user_should_see_url_contains_orders() {
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("orders"));
     }
+
+
+    @When("user enters username {string} password {string} and logins")
+    public void userEntersUsernamePasswordAndLogins(String username, String password) {
+        webTableLoginPage.inputUsername.sendKeys(username);
+        webTableLoginPage.inputPassword.sendKeys(password);
+        webTableLoginPage.loginButton.click();
+    }
+
+
+
+
+
 }
