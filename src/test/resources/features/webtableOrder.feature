@@ -48,7 +48,7 @@ Feature: Web table user order feature
       | Screenable  | 2        | Charles Darwin    | 221B Baker Street | London | England | 50505   | visa     | 1111222233334444 | 12/23      | Charles Darwin    |
       | MoneyCog    | 3        | Carl Sagan        | 221B Baker Street | London | England | 50505   | visa     | 1111222233334444 | 12/23      | Carl Sagan        |
       | Familybea   | 1        | Archimedes        | 221B Baker Street | London | England | 50505   | visa     | 1111222233334444 | 12/23      | Archimedes        |
-      | Screenable  | 2        | Alexander Flaming | 221B Baker Street | London | England | 50505   | visa     | 1111222233334444 | 12/23      | Alexander Flaming |
+      | Screenable  | 2        | Alexander Fleming | 221B Baker Street | London | England | 50505   | visa     | 1111222233334444 | 12/23      | Alexander Fleming |
 
 
 
