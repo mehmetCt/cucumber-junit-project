@@ -3,6 +3,7 @@ package com.cydeo.step_definitions;
 import com.cydeo.pages.BasePage;
 import com.cydeo.pages.WebTableLoginPage;
 import com.cydeo.pages.WebTableOrderPage;
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -90,11 +91,13 @@ public class WebTableOrder_StepDefs {
     @When("user selects credit card type {string}")
     public void user_selects_credit_card_type(String string) {
 
-        for (WebElement each : webTableOrderPage.cardType) {
-            if(each.getAttribute("value").equalsIgnoreCase(string)){
-                each.click();
-            }
-        }
+//        for (WebElement each : webTableOrderPage.cardType) {
+//            if(each.getAttribute("value").equalsIgnoreCase(string)){
+//                each.click();
+//            }
+//        }
+
+        BrowserUtils.clickRadioButton(webTableOrderPage.cardType,string);
 
     }
 
