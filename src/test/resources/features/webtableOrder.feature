@@ -16,7 +16,7 @@ Feature: Web table user order feature
     And user enters process order button
     Then user should see "Sherlock Holmes" in first row of the web table
 
-
+  @webtableAppOrder
   Scenario Template: User should be able to place order and order seen in web table with using DDT
     Given user is already logged in and on order page
     When user selects product type "<productType>"
@@ -40,6 +40,16 @@ Feature: Web table user order feature
       | MoneyCog    | 3        | Katherina Johnson | 221B Baker Street | London | England | 50505   | visa     | 1111222233334444 | 12/23      | Katherina Johnson |
       | Familybea   | 1        | Marry Anning      | 221B Baker Street | London | England | 50505   | visa     | 1111222233334444 | 12/23      | Marry Anning      |
       | Screenable  | 2        | Lise Meitner      | 221B Baker Street | London | England | 50505   | visa     | 1111222233334444 | 12/23      | Lise Meitner      |
+
+    Examples: Famous male scientist
+      | productType | quantity | customerName      | street            | city   | state   | zipCode | cardType | cardNumber       | expiryDate | expectedName      |
+      | Familybea   | 2        | Albert Einstein   | 221B Baker Street | London | England | 50505   | visa     | 1111222233334444 | 12/23      | Albert Einstein   |
+      | MoneyCog    | 4        | Alfred Nobel      | 221B Baker Street | London | England | 50505   | visa     | 1111222233334444 | 12/23      | Alfred Nobel      |
+      | Screenable  | 2        | Charles Darwin    | 221B Baker Street | London | England | 50505   | visa     | 1111222233334444 | 12/23      | Charles Darwin    |
+      | MoneyCog    | 3        | Carl Sagan        | 221B Baker Street | London | England | 50505   | visa     | 1111222233334444 | 12/23      | Carl Sagan        |
+      | Familybea   | 1        | Archimedes        | 221B Baker Street | London | England | 50505   | visa     | 1111222233334444 | 12/23      | Archimedes        |
+      | Screenable  | 2        | Alexander Flaming | 221B Baker Street | London | England | 50505   | visa     | 1111222233334444 | 12/23      | Alexander Flaming |
+
 
 
 
