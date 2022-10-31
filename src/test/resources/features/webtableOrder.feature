@@ -1,6 +1,6 @@
 Feature: Web table user order feature
 
-  @webtableAppOrder
+
   Scenario: User should be able to place order and order seen in web table
     Given user is already logged in and on order page
     When user selects product type "Familybea"
@@ -32,6 +32,7 @@ Feature: Web table user order feature
     And user enters process order button
     Then user should see "<expectedName>" in first row of the web table
 
+    @femaleScientist
     Examples: Famous female scientist
       | productType | quantity | customerName      | street            | city   | state   | zipCode | cardType | cardNumber       | expiryDate | expectedName      |
       | Familybea   | 2        | Rosalind Franklin | 221B Baker Street | London | England | 50505   | visa     | 1111222233334444 | 12/23      | Rosalind Franklin |
@@ -41,6 +42,7 @@ Feature: Web table user order feature
       | Familybea   | 1        | Marry Anning      | 221B Baker Street | London | England | 50505   | visa     | 1111222233334444 | 12/23      | Marry Anning      |
       | Screenable  | 2        | Lise Meitner      | 221B Baker Street | London | England | 50505   | visa     | 1111222233334444 | 12/23      | Lise Meitner      |
 
+    @maleScientist
     Examples: Famous male scientist
       | productType | quantity | customerName      | street            | city   | state   | zipCode | cardType | cardNumber       | expiryDate | expectedName      |
       | Familybea   | 2        | Albert Einstein   | 221B Baker Street | London | England | 50505   | visa     | 1111222233334444 | 12/23      | Albert Einstein   |
