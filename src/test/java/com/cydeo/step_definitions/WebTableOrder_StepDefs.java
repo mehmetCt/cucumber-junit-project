@@ -1,14 +1,24 @@
 package com.cydeo.step_definitions;
 
+import com.cydeo.pages.BasePage;
+import com.cydeo.pages.WebTableLoginPage;
+import com.cydeo.utilities.ConfigurationReader;
+import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class WebTableOrder_StepDefs {
 
+    WebTableLoginPage webTableLoginPage = new WebTableLoginPage();
+    BasePage basePage = new BasePage();
 
     @Given("user is already logged in and on order page")
     public void user_is_already_logged_in_and_on_order_page() {
+
+        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
+        webTableLoginPage.login(ConfigurationReader.getProperty("username"),ConfigurationReader.getProperty("password"));
+        basePage.orderButtonNavItem.click();
 
     }
 
