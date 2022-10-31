@@ -9,6 +9,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 public class WebTableOrder_StepDefs {
@@ -88,6 +89,12 @@ public class WebTableOrder_StepDefs {
 
     @When("user selects credit card type {string}")
     public void user_selects_credit_card_type(String string) {
+
+        for (WebElement each : webTableOrderPage.cardType) {
+            if(each.getAttribute("value").equalsIgnoreCase(string)){
+                each.click();
+            }
+        }
 
     }
 
