@@ -48,7 +48,4 @@ public class WebTableOrderPage extends BasePage{
     public WebElement processOrderButton;
 
 
-
-
-
 }

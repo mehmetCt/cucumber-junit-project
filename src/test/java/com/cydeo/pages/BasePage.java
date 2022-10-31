@@ -6,7 +6,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+
+// In this class we will store WebElements common to all pages
 public class BasePage {
+
+    public BasePage() {
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
 
     @FindBy(xpath = "//button[@class=\"button nav__item active\"]")
     public WebElement viewAllOrdersButtonNav;
@@ -19,10 +25,5 @@ public class BasePage {
 
     @FindBy(xpath = "//button[@class=\"button __logout\"]")
     public WebElement logoutButton;
-
-    public BasePage() {
-        PageFactory.initElements(Driver.getDriver(), this);
-    }
-
 
 }
