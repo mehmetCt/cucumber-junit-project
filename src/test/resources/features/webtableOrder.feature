@@ -17,19 +17,38 @@ Feature: Web table user order feature
     Then user should see "Sherlock Holmes" in first row of the web table
 
 
-    Scenario Template:
-      Given user is already logged in and on order page
-      When user selects product type "<productType>"
-      And user enters quantity <quantity>
-      And user enters customer name "<customerName>"
-      And user enters street "<street>"
-      And user enters city "<city>"
-      And user enters state "<state>"
-      And user enters zipcode "<zipCode>"
-      And user selects credit card type "<cardType>"
-      And user enters credit card number "<cardNumber>"
-      And user enters expiry date "<expiryDate>"
-      And user enters process order button
-      Then user should see "<expectedName>" in first row of the web table
+  Scenario Template: User should be able to place order and order seen in web table with using DDT
+    Given user is already logged in and on order page
+    When user selects product type "<productType>"
+    And user enters quantity <quantity>
+    And user enters customer name "<customerName>"
+    And user enters street "<street>"
+    And user enters city "<city>"
+    And user enters state "<state>"
+    And user enters zipcode "<zipCode>"
+    And user selects credit card type "<cardType>"
+    And user enters credit card number "<cardNumber>"
+    And user enters expiry date "<expiryDate>"
+    And user enters process order button
+    Then user should see "<expectedName>" in first row of the web table
 
-      Examples:
+    Examples:
+      | productType | quantity | customerName      | street            | city   | state   | zipCode | cardType | cardNumber       | expiryDate | expectedName      |
+      | Familybae   | 2        | Rosalind Franklin | 221B Baker Street | London | England | 50505   | visa     | 1111222233334444 | 12/23      | Rosalind Franklin |
+      | MoneyCog    | 4        | Marie Curie       | 221B Baker Street | London | England | 50505   | visa     | 1111222233334444 | 12/23      | Marie Curie       |
+      | Screenable  | 2        | Rachel Carson     | 221B Baker Street | London | England | 50505   | visa     | 1111222233334444 | 12/23      | Rachel Carson     |
+      | MoneyCog    | 3        | Katherina Johnson | 221B Baker Street | London | England | 50505   | visa     | 1111222233334444 | 12/23      | Katherina Johnson |
+      | Familybae   | 1        | Marry Anning      | 221B Baker Street | London | England | 50505   | visa     | 1111222233334444 | 12/23      | Marry Anning      |
+      | Screenable  | 2        | Lise Meitner      | 221B Baker Street | London | England | 50505   | visa     | 1111222233334444 | 12/23      | Lise Meitner      |
+
+
+
+
+
+
+
+
+
+
+
+
