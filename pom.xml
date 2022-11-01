@@ -50,6 +50,13 @@
         </dependency>
 
 
+        <dependency>
+            <groupId>me.jvt.cucumber</groupId>
+            <artifactId>reporting-plugin</artifactId>
+            <version>7.3.0</version>
+        </dependency>
+
+
     </dependencies>
 
 
